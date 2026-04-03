@@ -1,0 +1,52 @@
+/*
+ * ============================================================
+ * src/index.css — Global Styles
+ * ============================================================
+ * Tailwind CSS directives (processed by PostCSS via Vite).
+ * Any global overrides or custom utilities go below.
+ * ============================================================
+ */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ── Base resets ─────────────────────────────────────────── */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ── Custom scrollbar (webkit) ───────────────────────────── */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(99, 102, 241, 0.3);
+  border-radius: 99px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(99, 102, 241, 0.6);
+}
+
+/* ── Select element reset (dark-mode compatible) ─────────── */
+select option {
+  background-color: #1c2128;
+  color: #f0f2f5;
+}
